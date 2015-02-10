@@ -1,0 +1,10 @@
+<%= link_to "postaGIF", new_gif_path %>
+
+<div class='feed'>
+  <h2>GIFs</h2>
+  <div class="cards">
+  <% @gifs.each do |gif| %>
+    <%= render partial: 'gif_card', locals: { gif: gif } %>
+  <% end %>
+  </div>
+</div>
